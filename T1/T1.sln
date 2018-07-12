@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "caixaeletronico", "caixaele
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "comqualidadepodevotar", "comqualidadepodevotar\comqualidadepodevotar.csproj", "{9761C828-376E-4B24-A31E-828BE2E33408}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "idadedosmelhoresamigos", "idadedosmelhoresamigos\idadedosmelhoresamigos.csproj", "{3ACC8159-F9CE-44DB-89B9-4B673C8BB6D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9761C828-376E-4B24-A31E-828BE2E33408}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9761C828-376E-4B24-A31E-828BE2E33408}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9761C828-376E-4B24-A31E-828BE2E33408}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ACC8159-F9CE-44DB-89B9-4B673C8BB6D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ACC8159-F9CE-44DB-89B9-4B673C8BB6D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ACC8159-F9CE-44DB-89B9-4B673C8BB6D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ACC8159-F9CE-44DB-89B9-4B673C8BB6D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
