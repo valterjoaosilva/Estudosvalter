@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{85028462-6D42-4874-B433-E0CF58CFB2AE}</ProjectGuid>
+    <ProjectGuid>{A5B57017-3D7D-4470-9AEB-900D17CE32E7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>numerosate1000</RootNamespace>
-    <AssemblyName>numerosate1000</AssemblyName>
+    <RootNamespace>Baskara</RootNamespace>
+    <AssemblyName>Baskara</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -64,7 +64,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
