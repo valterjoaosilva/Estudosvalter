@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baskara", "Baskara\Baskara.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "meuprimeiroprograma", "meuprimeiroprograma\meuprimeiroprograma.csproj", "{3CACDFF7-F052-44AD-9965-37E8F20F3661}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "caixaeletronico", "caixaeletronico\caixaeletronico.csproj", "{98CBCF69-48ED-4C28-B6B8-420090624774}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "comqualidadepodevotar", "comqualidadepodevotar\comqualidadepodevotar.csproj", "{9761C828-376E-4B24-A31E-828BE2E33408}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{3CACDFF7-F052-44AD-9965-37E8F20F3661}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CACDFF7-F052-44AD-9965-37E8F20F3661}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CACDFF7-F052-44AD-9965-37E8F20F3661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98CBCF69-48ED-4C28-B6B8-420090624774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98CBCF69-48ED-4C28-B6B8-420090624774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98CBCF69-48ED-4C28-B6B8-420090624774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98CBCF69-48ED-4C28-B6B8-420090624774}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9761C828-376E-4B24-A31E-828BE2E33408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9761C828-376E-4B24-A31E-828BE2E33408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9761C828-376E-4B24-A31E-828BE2E33408}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9761C828-376E-4B24-A31E-828BE2E33408}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
