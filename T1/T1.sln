@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "seriefibonacci", "seriefibo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafioforsencadeados", "Desafioforsencadeados\Desafioforsencadeados.csproj", "{5606C753-4DD3-4454-8678-CF1788511160}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "divisivel3e4", "divisivel3e4\divisivel3e4.csproj", "{717740E4-8177-4E2B-BD6E-457E1F2BA880}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{5606C753-4DD3-4454-8678-CF1788511160}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5606C753-4DD3-4454-8678-CF1788511160}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5606C753-4DD3-4454-8678-CF1788511160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{717740E4-8177-4E2B-BD6E-457E1F2BA880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{717740E4-8177-4E2B-BD6E-457E1F2BA880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{717740E4-8177-4E2B-BD6E-457E1F2BA880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{717740E4-8177-4E2B-BD6E-457E1F2BA880}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
