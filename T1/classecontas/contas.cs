@@ -12,5 +12,6 @@ namespace classecontas
         public string titular;
         public double saldo;
         public string cpf;
+        public int agencia;     
     }
 }

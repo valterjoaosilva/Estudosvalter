@@ -24,10 +24,18 @@ namespace classecontas
             Valter.titular = "Valter João";
             Valter.saldo = 3000.0;
             Valter.cpf = "71264531915";
+            Valter.agencia = 12;
+
+            contas Samira = new contas();
+            Samira.numero = 1;
+            Samira.titular = "Samira Oechesler";
+            Samira.saldo = 8300.0;
+            Samira.cpf = "70345634512";
+            Samira.agencia = 14;
 
 
             MessageBox.Show(Valter.titular);
-
+            MessageBox.Show(Samira.titular);
         }
     }
 }
