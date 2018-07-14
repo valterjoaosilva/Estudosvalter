@@ -18,8 +18,30 @@ namespace contassacardepositar
             {
             this.saldo += valoradepositar;
             }
-        public void saca; (double valorsacado)
+        }
+        public void saca; (double valorasacar)
+        {
+            if (this.saldo => valorasacar && valorasacar >0)
+             {
+              this.saldo -= valorasacar
+             }       
+
+
+            
+    
+    
+    
+
     }
+
+
+
+        
+
+       
+
+    }
+       
 
 }        
         
