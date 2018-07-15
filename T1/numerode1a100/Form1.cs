@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Desafioforsencadeados
+namespace numerode1a100
 {
     public partial class Form1 : Form
     {
@@ -19,22 +19,15 @@ namespace Desafioforsencadeados
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int ql = 5;
-            string triangulo = " ";
-            for (int l = 1; l <= ql; l++)
+            int soma = 0;
+            for (int i = 1; i <= 100; i++)
             {
-                for (int c =1; c<=l; c++)
+                if (i % 3 != 0)
                 {
-                    triangulo += (l * c) + " ";
+                    soma += i;
                 }
-                triangulo += "\n";
             }
-            MessageBox.Show(triangulo);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            MessageBox.Show("A soma é:" + soma);
         }
     }
 }

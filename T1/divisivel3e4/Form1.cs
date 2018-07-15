@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Desafioforsencadeados
+namespace divisivel3e4
 {
     public partial class Form1 : Form
     {
@@ -19,21 +19,22 @@ namespace Desafioforsencadeados
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int ql = 5;
-            string triangulo = " ";
-            for (int l = 1; l <= ql; l++)
-            {
-                for (int c =1; c<=l; c++)
-                {
-                    triangulo += (l * c) + " ";
-                }
-                triangulo += "\n";
-            }
-            MessageBox.Show(triangulo);
-        }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+
+           
+            
+            
+            if (15 % 3 == 0 || 15 % 4 == 0)
+            {
+                MessageBox.Show("É divisível OU POR TRêS OU POR QUATRO.");
+            }
+            else
+            {
+                MessageBox.Show("Não é divisível NEM POR TRÊS NEM POR QUATRO");
+            }
+
+
+
 
         }
     }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Desafioforsencadeados
+namespace numeros0a30
 {
     public partial class Form1 : Form
     {
@@ -19,21 +19,13 @@ namespace Desafioforsencadeados
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int ql = 5;
-            string triangulo = " ";
-            for (int l = 1; l <= ql; l++)
+            for (int i = 1; i <= 30; i++)
             {
-                for (int c =1; c<=l; c++)
+                if(i % 3 == 0 || i % 4 == 0)
                 {
-                    triangulo += (l * c) + " ";
+                    MessageBox.Show("divisivel por 3 ou 4 é" + i);
                 }
-                triangulo += "\n";
             }
-            MessageBox.Show(triangulo);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
         }
     }
