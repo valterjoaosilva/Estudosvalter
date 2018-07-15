@@ -12,44 +12,44 @@ namespace contassacardepositar
         public string titular;
         public double saldo;
         public Cliente cliente;
-        public void deposita; (double valoradepositar)
+        public void deposita(double valoradepositar)
         {
-            if (valoradepositar > 0)
+            If(valoradepositar > 0)
             {
-            this.saldo += valoradepositar;
+                this.saldo += valordodeposito;
             }
         }
-        public void saca; (double valorasacar)
+        public void saca(double valor)
         {
-            if (this.saldo => valorasacar && valorasacar >0)
-             {
+            if (this.saldo =>valorasacar && valorasacar > 0)
+            {
                 this.saldo -= valorasacar;
-             }       
-        public void transfere (double valor, Bancos destino )
-        {
-            this.saca (valor),
-            destino.deposita (valor),
+            }
         }
+                  
+        public void transfere(double valor, Bancos destino)
+        {
+            this.saca(valor);
+            destino.deposita(valor);
+        }
+
+           
+
+
+    }
 
             
     
     
     
 
-    }
+}
 
 
 
         
 
        
-
-    }
-       
-
-}        
-        
-
     
 
 
