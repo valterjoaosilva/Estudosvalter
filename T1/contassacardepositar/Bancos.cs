@@ -11,7 +11,7 @@ namespace contassacardepositar
         public int numero;
         public string titular;
         public double saldo;
-
+        public Cliente cliente;
         public void deposita; (double valoradepositar)
         {
             if (valoradepositar > 0)
@@ -23,9 +23,13 @@ namespace contassacardepositar
         {
             if (this.saldo => valorasacar && valorasacar >0)
              {
-              this.saldo -= valorasacar
+                this.saldo -= valorasacar;
              }       
-
+        public void transfere (double valor, Bancos destino )
+        {
+            this.saca (valor),
+            destino.deposita (valor),
+        }
 
             
     

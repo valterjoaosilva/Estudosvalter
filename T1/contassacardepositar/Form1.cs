@@ -19,7 +19,12 @@ namespace contassacardepositar
 
         private void button1_Click(object sender, EventArgs e)
         {
-         
+            Bancos conta = new Bancos();
+            Cliente cliente = new Cliente();
+            conta.cliente = cliente;
+            cliente.nome = "Valter";
+
+            MessageBox.Show(conta.cliente.nome);
 
 
         }
