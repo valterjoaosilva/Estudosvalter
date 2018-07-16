@@ -14,13 +14,13 @@ namespace contassacardepositar
         public Cliente cliente;
         public void deposita(double valoradepositar)
         {
-            If(valoradepositar > 0)
+            if(valoradepositar > 0)
             {
-                this.saldo += valordodeposito;
+                this.saldo += valoradepositar;
             }
         }
         //alterado o meto valor que saca
-        public bool saca(double valorasacar)
+        public bool Saca(double valorasacar)
         {
             if (valorasacar > this.saldo || valorasacar > 0)
             {
@@ -28,30 +28,31 @@ namespace contassacardepositar
             }
             else
             {
-                if (this.titular.Ehmaiordeidade)
+                if (this.titular.Ehmaiordeidade())
                 {
                     this.saldo -= valorasacar;
                     return true;
                 }
-            }
-            else
-            {
-                if(valorasacar <= 200)
-                {
-                    this.saldo -= valorasacar;
-                }
+
                 else
                 {
-                    return false;
-                }
-                            
+                    if (valorasacar <= 200)
+                    {
+                        this.saldo -= valorasacar;
+                    }
+
+                    else
+                    {
+                        return false;
+                    }
+                }           
             }
 
         }
                   
         public void transfere(double valor, Bancos destino)
         {
-            this.saca(valor);
+            this.Saca(valor);
             destino.deposita(valor);
         }
 

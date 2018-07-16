@@ -19,14 +19,26 @@ namespace contassacardepositar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Bancos conta = new Bancos();
-            Cliente cliente = new Cliente();
-            conta.cliente = cliente;
-            cliente.nome = "Valter";
+            Bancos contaValter = new Bancos();
+           contaValter.numero = 1;
+           contaValter.saldo = 3500.0;
 
-            MessageBox.Show(conta.cliente.nome);
+            Cliente clienteValter = new Cliente();
+            clienteValter.titular = "Valter";
+            clienteValter.idade = 18;
 
+            clienteValter.titular = contaValter;
 
+            bool sacou = contaValter.Saca(300.0);
+            if(sacou)
+            {
+                MessageBox.Show("saldo contaValter após saque" + contaValter.saldo);
+
+            }
+            else
+            {
+                MessageBox.Show("não foi possível efetuar saque");
+            }
         }
     }
 }
