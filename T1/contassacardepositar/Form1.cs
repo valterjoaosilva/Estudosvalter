@@ -27,7 +27,7 @@ namespace contassacardepositar
             clienteValter.titular = "Valter";
             clienteValter.idade = 18;
 
-            clienteValter.titular = contaValter;
+            clienteValter.titular = contaValter.titular;
 
             bool sacou = contaValter.Saca(300.0);
             if(sacou)

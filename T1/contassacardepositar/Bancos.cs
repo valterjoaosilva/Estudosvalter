@@ -28,7 +28,7 @@ namespace contassacardepositar
             }
             else
             {
-                if (this.titular.Ehmaiordeidade())
+                if (this.cliente.Ehmaiordeidade())
                 {
                     this.saldo -= valorasacar;
                     return true;
@@ -39,6 +39,7 @@ namespace contassacardepositar
                     if (valorasacar <= 200)
                     {
                         this.saldo -= valorasacar;
+                        return true; ;
                     }
 
                     else
@@ -47,6 +48,7 @@ namespace contassacardepositar
                     }
                 }           
             }
+     
 
         }
                   
