@@ -19,12 +19,34 @@ namespace contassacardepositar
                 this.saldo += valordodeposito;
             }
         }
-        public void saca(double valor)
+        //alterado o meto valor que saca
+        public bool saca(double valorasacar)
         {
-            if (this.saldo =>valorasacar && valorasacar > 0)
+            if (valorasacar > this.saldo || valorasacar > 0)
             {
-                this.saldo -= valorasacar;
+                return false;
             }
+            else
+            {
+                if (this.titular.Ehmaiordeidade)
+                {
+                    this.saldo -= valorasacar;
+                    return true;
+                }
+            }
+            else
+            {
+                if(valorasacar <= 200)
+                {
+                    this.saldo -= valorasacar;
+                }
+                else
+                {
+                    return false;
+                }
+                            
+            }
+
         }
                   
         public void transfere(double valor, Bancos destino)
