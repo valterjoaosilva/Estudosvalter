@@ -8,10 +8,10 @@ namespace contassacardepositar
 {
     class Bancos
     {
-        public int numero;
-        public string titular;
+        public int numero { get; set; }
+        public string titular { get; set; }
         public double saldo { get; private set; }
-        public Cliente cliente;
+        public Cliente cliente { get; set; }
         public void deposita(double valoradepositar)
         {
             if(valoradepositar > 0)
