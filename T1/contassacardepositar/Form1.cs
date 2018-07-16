@@ -21,7 +21,7 @@ namespace contassacardepositar
         {
             Bancos contaValter = new Bancos();
            contaValter.numero = 1;
-           contaValter.saldo = 3500.0;
+           contaValter.deposita(3500.0);
 
             Cliente clienteValter = new Cliente();
             clienteValter.titular = "Valter";

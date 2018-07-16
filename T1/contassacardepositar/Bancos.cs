@@ -10,7 +10,7 @@ namespace contassacardepositar
     {
         public int numero;
         public string titular;
-        public double saldo;
+        public double saldo { get; private set; }
         public Cliente cliente;
         public void deposita(double valoradepositar)
         {
@@ -22,7 +22,7 @@ namespace contassacardepositar
         //alterado o meto valor que saca
         public bool Saca(double valorasacar)
         {
-            if (valorasacar > this.saldo || valorasacar > 0)
+            if (valorasacar > this.saldo || valorasacar < 0)
             {
                 return false;
             }
