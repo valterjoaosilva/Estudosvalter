@@ -23,12 +23,11 @@ namespace contassacardepositar
            contaValter.numero = 1;
            contaValter.saldo = 3500.0;
 
-            Cliente clienteValter = new Cliente();
-            clienteValter.titular = "Valter";
+            Cliente clienteValter = new Cliente("Valter João da Silva");
+            clienteValter.Titular = "Valter João da Silva";
             clienteValter.idade = 18;
-
-            clienteValter.titular = contaValter;
-
+            MessageBox.Show(clienteValter.Titular);
+            
             bool sacou = contaValter.Saca(300.0);
             if(sacou)
             {

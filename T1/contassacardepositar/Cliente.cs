@@ -8,7 +8,7 @@ namespace contassacardepositar
 {
     class Cliente
     {
-        public string titular;
+        public string Titular;
         public string rg;
         public string endereco;
         public int idade;
@@ -16,6 +16,9 @@ namespace contassacardepositar
         {
             return this.idade > 0; 
         }
-           
+        public Cliente(string titular)
+        {
+            this.Titular = titular;
+        } 
     }
 }
