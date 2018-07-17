@@ -8,10 +8,10 @@ namespace contassacardepositar
 {
     class Bancos
     {
-        public int numero;
-        public string titular;
-        public double saldo;
-        public Cliente cliente;
+        public int numero { get; set; }
+        public string titular { get; set; }
+        public double saldo { get; private set; }
+        public Cliente cliente { get; set; }
         public void deposita(double valoradepositar)
         {
             if(valoradepositar > 0)
@@ -22,13 +22,13 @@ namespace contassacardepositar
         //alterado o meto valor que saca
         public bool Saca(double valorasacar)
         {
-            if (valorasacar > this.saldo || valorasacar > 0)
+            if (valorasacar > this.saldo || valorasacar < 0)
             {
                 return false;
             }
             else
             {
-                if (this.titular.Ehmaiordeidade())
+                if (this.cliente.Ehmaiordeidade())
                 {
                     this.saldo -= valorasacar;
                     return true;
@@ -39,6 +39,7 @@ namespace contassacardepositar
                     if (valorasacar <= 200)
                     {
                         this.saldo -= valorasacar;
+                        return true; ;
                     }
 
                     else
@@ -47,6 +48,7 @@ namespace contassacardepositar
                     }
                 }           
             }
+     
 
         }
                   
