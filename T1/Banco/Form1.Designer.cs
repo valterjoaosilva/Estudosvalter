@@ -31,6 +31,8 @@
             this.textoTitular = new System.Windows.Forms.TextBox();
             this.textoSaldo = new System.Windows.Forms.TextBox();
             this.textoNumero = new System.Windows.Forms.TextBox();
+            this.textoValor = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -60,16 +62,37 @@
             this.textoNumero.Text = "textoNumero";
             this.textoNumero.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
+            // textoValor
+            // 
+            this.textoValor.Location = new System.Drawing.Point(308, 230);
+            this.textoValor.Name = "textoValor";
+            this.textoValor.Size = new System.Drawing.Size(185, 20);
+            this.textoValor.TabIndex = 3;
+            this.textoValor.Text = "textoValor";
+            this.textoValor.TextChanged += new System.EventHandler(this.textoValor_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(308, 269);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(185, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textoValor);
             this.Controls.Add(this.textoNumero);
             this.Controls.Add(this.textoSaldo);
             this.Controls.Add(this.textoTitular);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "textoValor";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -81,6 +104,8 @@
         private System.Windows.Forms.TextBox textoTitular;
         private System.Windows.Forms.TextBox textoSaldo;
         private System.Windows.Forms.TextBox textoNumero;
+        private System.Windows.Forms.TextBox textoValor;
+        private System.Windows.Forms.Button button1;
     }
 }
 

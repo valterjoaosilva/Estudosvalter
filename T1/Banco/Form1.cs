@@ -26,6 +26,8 @@ namespace Banco
             textoTitular.Text = contaValter.Titular;
             textoNumero.Text = Convert.ToString(contaValter.Numero);
             textoSaldo.Text = Convert.ToString(contaValter.Saldo);
+            String textoValorDeposito = textoValor.Text;
+            double valorDeposito = Convert.ToDouble(textoValorDeposito);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -39,6 +41,16 @@ namespace Banco
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textoValor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
