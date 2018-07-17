@@ -23,12 +23,10 @@ namespace contassacardepositar
            contaValter.numero = 1;
            contaValter.deposita(3500.0);
 
-            Cliente clienteValter = new Cliente();
-            clienteValter.titular = "Valter";
+            Cliente clienteValter = new Cliente("Valter");
             clienteValter.idade = 18;
 
-            clienteValter.titular = contaValter.titular;
-
+            
             bool sacou = contaValter.Saca(300.0);
             if(sacou)
             {
