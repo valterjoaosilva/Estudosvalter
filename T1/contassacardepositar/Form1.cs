@@ -40,5 +40,10 @@ namespace contassacardepositar
                 MessageBox.Show("não foi possível efetuar saque");
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
