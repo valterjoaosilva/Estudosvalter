@@ -12,22 +12,22 @@ namespace Banco
 {
     public partial class Form1 : Form
     {
+        private Conta contaValter;
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load( object sender, EventArgs e)
         {
-            Conta contaValter = new Conta();
+            contaValter = new Conta();
             contaValter.Numero = 1;
             contaValter.Titular = "Valter João"; 
             contaValter.deposita(250.0);
-            textoTitular.Text = contaValter.Titular;
-            textoNumero.Text = Convert.ToString(contaValter.Numero);
-            textoSaldo.Text = Convert.ToString(contaValter.Saldo);
-            String textoValorDeposito = textoValor.Text;
-            double valorDeposito = Convert.ToDouble(textoValorDeposito);
+
+            MostraConta();
+                     
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -51,6 +51,23 @@ namespace Banco
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            String textoValorDeposito = textoValor.Text;
+            double valorDeposito = Convert.ToDouble(textoValorDeposito);
+            contaValter.deposita(valorDeposito);
+
+            MostraConta();
+        }   
+
+        private void MostraConta()
+        {
+            textoTitular.Text = contaValter.Titular;
+            textoNumero.Text = Convert.ToString(contaValter.Numero);
+            textoSaldo.Text = Convert.ToString(contaValter.Saldo);
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
