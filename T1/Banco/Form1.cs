@@ -69,6 +69,12 @@ namespace Banco
 
         private void button2_Click(object sender, EventArgs e)
         {
+            String textoValorSaque = textoValor.Text;
+            double valorSaque = Convert.ToDouble(textoValorSaque);
+            contaValter.saca(valorSaque);
+
+            MostraConta();
+
 
         }
     }
