@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContaPoupança", "ContaPoup
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polimorfismo", "Polimorfismo\Polimorfismo.csproj", "{34C4360F-1174-4D32-A76D-C020649821AC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{39A1404A-6094-46AD-80AC-384655EA146E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBox", "ComboBox\ComboBox.csproj", "{9C392F6B-5436-4EEE-A052-B6068DF7A5A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +127,14 @@ Global
 		{34C4360F-1174-4D32-A76D-C020649821AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34C4360F-1174-4D32-A76D-C020649821AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34C4360F-1174-4D32-A76D-C020649821AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39A1404A-6094-46AD-80AC-384655EA146E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39A1404A-6094-46AD-80AC-384655EA146E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39A1404A-6094-46AD-80AC-384655EA146E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39A1404A-6094-46AD-80AC-384655EA146E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C392F6B-5436-4EEE-A052-B6068DF7A5A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C392F6B-5436-4EEE-A052-B6068DF7A5A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C392F6B-5436-4EEE-A052-B6068DF7A5A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C392F6B-5436-4EEE-A052-B6068DF7A5A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
