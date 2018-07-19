@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "contassacardepositar", "con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banco", "Banco\Banco.csproj", "{E0888C77-A6DB-4708-9B95-8846504A437C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContaPoupança", "ContaPoupança\ContaPoupança.csproj", "{D3145664-A1E9-4878-8A3B-011CF95738E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{E0888C77-A6DB-4708-9B95-8846504A437C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0888C77-A6DB-4708-9B95-8846504A437C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0888C77-A6DB-4708-9B95-8846504A437C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3145664-A1E9-4878-8A3B-011CF95738E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3145664-A1E9-4878-8A3B-011CF95738E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3145664-A1E9-4878-8A3B-011CF95738E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3145664-A1E9-4878-8A3B-011CF95738E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
