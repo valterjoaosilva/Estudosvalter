@@ -19,7 +19,7 @@ namespace ComboBox
                 this.Saldo += Valor;
             }
         }
-        public void saca(double Valor)
+        public void Saca(double Valor)
         {
             if (this.Saldo > Valor)
             {
@@ -29,7 +29,7 @@ namespace ComboBox
         }
         public void transfere(double Valor, Conta destino)
         {
-            this.saca(Valor);
+            this.Saca(Valor);
             destino.deposita(Valor);
         }
     }
