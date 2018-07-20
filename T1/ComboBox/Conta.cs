@@ -27,7 +27,7 @@ namespace ComboBox
             }
 
         }
-        public void transfere(double Valor, Conta destino)
+        public void Transfere(double Valor, Conta destino)
         {
             this.Saca(Valor);
             destino.deposita(Valor);

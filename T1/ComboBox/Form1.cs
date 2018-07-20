@@ -46,6 +46,7 @@ namespace ComboBox
             foreach(Conta conta in contas)//o professor colocou Conta c porém não encontrei referência para a mesma
             {
                 ComboDeContas.Items.Add(conta.Titular);
+                destinoDaTransferencia.Items.Add(conta.Titular);
             }
 
             
@@ -91,6 +92,7 @@ namespace ComboBox
             contaSelecionada.Saca(valorSaque);
             this.MostraConta(contaSelecionada);
         }
+
         private void MostraConta(Conta contaSelecionada)
         {
             TextoTitular.Text = contaSelecionada.Titular;
@@ -102,6 +104,40 @@ namespace ComboBox
         private void TextoValor_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void destinoDaTransferencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            int indiceSelecionado = destinoDaTransferencia.SelectedIndex;
+            Conta contaSelecionada = this.contas[indiceSelecionado];
+
+            TextoTitular.Text = contaSelecionada.Titular;
+            TextoNumero.Text = Convert.ToString(contaSelecionada.Numero);
+            TextoSaldo.Text = Convert.ToString(contaSelecionada.Saldo);
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            String textoValorTransfere = textoValor.Text;
+            double valorTransfere = Convert.ToDouble(textoValorTransfere);
+            int indiceDaContaDestino = destinoDaTransferencia.SelectedIndex;
+            Conta contaDestino = this.contas[indiceDaContaDestino];
+            Conta contaSelecionada = this.BuscaContaSelecionada();
+
+            contaSelecionada.Transfere(valorTransfere, contaDestino);
+
+            MessageBox.Show
+                (
+                "Origem: " +
+                contaSelecionada.Titular
+                + " - Saldo atual: R$" +
+                contaSelecionada.Saldo
+                + "\nDestino: " +
+                contaDestino.Titular
+                + " - Saldo atual: R$" +
+                contaDestino.Saldo
+                );
         }
     }
 }

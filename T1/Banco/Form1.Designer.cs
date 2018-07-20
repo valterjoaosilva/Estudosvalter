@@ -31,10 +31,10 @@
             this.textoTitular = new System.Windows.Forms.TextBox();
             this.textoSaldo = new System.Windows.Forms.TextBox();
             this.textoNumero = new System.Windows.Forms.TextBox();
-            this.textoValor = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.textoValor = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -62,15 +62,6 @@
             this.textoNumero.TabIndex = 2;
             this.textoNumero.Text = "textoNumero";
             this.textoNumero.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // textoValor
-            // 
-            this.textoValor.Location = new System.Drawing.Point(308, 230);
-            this.textoValor.Name = "textoValor";
-            this.textoValor.Size = new System.Drawing.Size(185, 20);
-            this.textoValor.TabIndex = 3;
-            this.textoValor.Text = "textoValor";
-            this.textoValor.TextChanged += new System.EventHandler(this.textoValor_TextChanged);
             // 
             // button1
             // 
@@ -101,6 +92,15 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Titular";
             // 
+            // textoValor
+            // 
+            this.textoValor.Location = new System.Drawing.Point(308, 230);
+            this.textoValor.Name = "textoValor";
+            this.textoValor.Size = new System.Drawing.Size(185, 20);
+            this.textoValor.TabIndex = 3;
+            this.textoValor.Text = "textoValor";
+            this.textoValor.TextChanged += new System.EventHandler(this.textoValor_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,10 +126,10 @@
         private System.Windows.Forms.TextBox textoTitular;
         private System.Windows.Forms.TextBox textoSaldo;
         private System.Windows.Forms.TextBox textoNumero;
-        private System.Windows.Forms.TextBox textoValor;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textoValor;
     }
 }
 
