@@ -54,7 +54,9 @@ namespace ComboBox
             int indiceSelecionado = ComboDeContas.SelectedIndex;
             Conta contaSelecionada = this.contas[indiceSelecionado];
 
-            this.MostraConta(contaSelecionada);// comando dando erro pois não é um método criado
+            TextoTitular.Text = contaSelecionada.Titular;
+            TextoNumero.Text = Convert.ToString(contaSelecionada.Numero);
+            TextoSaldo.Text = Convert.ToString(contaSelecionada.Saldo);
           
                               
             
