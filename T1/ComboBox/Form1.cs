@@ -11,15 +11,54 @@ using System.Windows.Forms;
 namespace ComboBox
 {
     public partial class Form1 : Form
-    {
+    {   Conta[] contas;
         public Form1()
         {
             InitializeComponent();
         }
 
+        
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            contas = new Conta[3];
+
+            Conta contaValter = new Conta();
+            contaValter.Numero = 1;
+            contaValter.Titular = "Valter João da Silva Junior";
+            contas[0] = contaValter;
+
+            contas  = new Conta[3];
+
+            Conta contaSamira = new Conta();
+            contaSamira.Numero = 2;
+            contaSamira.Titular = "Samira Regina Oecksler";
+            contas[1] = contaSamira;
+
+            contas = new Conta[3];
+
+            Conta contaPedro = new Conta();
+            contaPedro.Numero = 3;
+            contaPedro.Titular = "Pedro Alex Martins";
+            contas[3] = contaPedro;
+
+            foreach(Conta conta in contas)
+            {
+                ComboDeContas.Items.Add(conta.Titular);
+            }
+
+
+        }
         private void ComboDeContas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            C
+            int indiceSelecionado = ComboDeContas.SelectedIndex;
+            Conta contaSelecionada = this.contas[indiceSelecionado];
+
+            TextoTitular.Text = contaSelecionada.Titular;
+            TextoNumero.Text = Convert.ToString(contaSelecionada.Numero);
+          
+                              
+            
         }
     }
 }
