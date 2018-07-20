@@ -42,7 +42,7 @@ namespace ComboBox
             contaPedro.Titular = "Pedro Alex Martins";
             contas[3] = contaPedro;
 
-            foreach(Conta conta in contas)
+            foreach(Conta conta in contas)//o professor colocou Conta c porém não encontrei referência para a mesma
             {
                 ComboDeContas.Items.Add(conta.Titular);
             }
@@ -54,8 +54,7 @@ namespace ComboBox
             int indiceSelecionado = ComboDeContas.SelectedIndex;
             Conta contaSelecionada = this.contas[indiceSelecionado];
 
-            TextoTitular.Text = contaSelecionada.Titular;
-            TextoNumero.Text = Convert.ToString(contaSelecionada.Numero);
+            this.MostraConta(contaSelecionada);// comando dando erro pois não é um método criado
           
                               
             
