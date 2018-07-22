@@ -21,6 +21,7 @@ namespace ComboBox
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             contas = new Conta[3];
 
             Conta contaValter = new Conta();
@@ -42,7 +43,7 @@ namespace ComboBox
             contaPedro.Titular = "Pedro Alex Martins";
             contas[2] = contaPedro;
 
-
+            
             foreach(Conta conta in contas)//o professor colocou Conta c porém não encontrei referência para a mesma
             {
                 ComboDeContas.Items.Add(conta.Titular);
@@ -138,6 +139,20 @@ namespace ComboBox
                 + " - Saldo atual: R$" +
                 contaDestino.Saldo
                 );
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            poupança cp = new poupança();
+            SeguroDeVida sv = new SeguroDeVida();
+            cp.deposita(100);
+            sv.deposita(200);
+            TotalizadorDeTributos t = new TotalizadorDeTributos();
+            t.Acumula(cp);
+            t.Acumula(sv);
+
+            MessageBox.Show("valor Tributos" + t.Total);
+
         }
     }
 }
