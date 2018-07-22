@@ -150,9 +150,12 @@ namespace ComboBox
             TotalizadorDeTributos t = new TotalizadorDeTributos();
             t.Acumula(cp);
             t.Acumula(sv);
-
+            GerenciadorDeImpostos i = new GerenciadorDeImpostos();
+            i.Adiciona(cp);
+            i.Adiciona(sv);
+            
             MessageBox.Show("valor Tributos" + t.Total);
-
+            MessageBox.Show("valor Impostos" + i.Total);
         }
     }
 }
