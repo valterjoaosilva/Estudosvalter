@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BennerComboBox
+namespace BancoCadastroDeContas
 {
-    class ContaCorrente : Conta
+    class ContaCorrente : Contas
     {
     }
 }

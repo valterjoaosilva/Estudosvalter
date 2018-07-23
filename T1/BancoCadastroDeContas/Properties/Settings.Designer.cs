@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BennerComboBox.Properties
+namespace BancoCadastroDeContas.Properties
 {
 
 

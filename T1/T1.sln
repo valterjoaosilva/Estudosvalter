@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBox", "ComboBox\ComboBox.csproj", "{9C392F6B-5436-4EEE-A052-B6068DF7A5A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BancoCadastroDeContas", "BancoCadastroDeContas\BancoCadastroDeContas.csproj", "{2841EE02-CF9E-4691-85FE-C8E25813F0E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{9C392F6B-5436-4EEE-A052-B6068DF7A5A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C392F6B-5436-4EEE-A052-B6068DF7A5A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C392F6B-5436-4EEE-A052-B6068DF7A5A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2841EE02-CF9E-4691-85FE-C8E25813F0E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2841EE02-CF9E-4691-85FE-C8E25813F0E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2841EE02-CF9E-4691-85FE-C8E25813F0E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2841EE02-CF9E-4691-85FE-C8E25813F0E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
