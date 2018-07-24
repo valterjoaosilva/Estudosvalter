@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9761C828-376E-4B24-A31E-828BE2E33408}</ProjectGuid>
+    <ProjectGuid>{EDFB9DAE-BF95-4ACF-98E8-C2EEC72BEB6A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>comqualidadepodevotar</RootNamespace>
-    <AssemblyName>comqualidadepodevotar</AssemblyName>
+    <RootNamespace>CaixaEletronicoBanco</RootNamespace>
+    <AssemblyName>CaixaEletronicoBanco</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,6 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroDeContas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroDeContas.Designer.cs">
+      <DependentUpon>CadastroDeContas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContaCorrente.cs" />
+    <Compile Include="Contas.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +61,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CadastroDeContas.resx">
+      <DependentUpon>CadastroDeContas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

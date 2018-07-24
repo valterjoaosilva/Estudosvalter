@@ -8,30 +8,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BancoCadastroDeContas
+namespace CaixaEletronicoBanco
 {
     public partial class CadastroDeContas : Form
     {
-        public CadastroDeContas()
+        private Form1 aplicacaoPrincipal;
+        public CadastroDeContas(Form1 aplicacaoPrincipal)
         {
+            this.aplicacaoPrincipal = aplicacaoPrincipal;
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             String titular = titularConta.Text;
-            int numero = Convert.ToInt32 (numeroConta.Text);
+            int numero = Convert.ToInt32(numeroConta.Text);
 
-            Contas contas = new ContaCorrente()
+            Contas conta = new ContaCorrente()
             {
                 Numero = numero, Titular = titular
             };
+            this.aplicacaoPrincipal.AdicionaConta(conta);
+        }
 
+        private void CadastroDeContas_Load(object sender, EventArgs e)
+        {
 
         }
     }
