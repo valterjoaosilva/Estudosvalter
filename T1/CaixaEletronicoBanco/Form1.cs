@@ -53,6 +53,14 @@ namespace CaixaEletronicoBanco
 
         public void AdicionaConta(Contas conta)
         {
+            if (this.quantidadesDeContas == this.contas.Length)
+            {
+                Contas[] novo = new Contas[this.quantidadesDeContas * 2];
+                for (int i = 0; i < this.quantidadesDeContas; i++)
+                {
+                    novo[i] = this.contas[i];
+                }
+            }
             this.contas[this.quantidadesDeContas] = conta;
             this.quantidadesDeContas++;
             comboContas.Items.Add(conta.Titular);

@@ -24,14 +24,35 @@ namespace CaixaEletronicoBanco
             String titular = titularConta.Text;
             int numero = Convert.ToInt32(numeroConta.Text);
 
-            Contas conta = new ContaCorrente()
+            Contas conta = null;
+
+            if (comboTipoConta.SelectedIndex == 0)
             {
-                Numero = numero, Titular = titular
-            };
+                conta = new ContaCorrente()
+                {
+                    Numero = numero,
+                    Titular = titular
+                };
+            }
+            else if (comboTipoConta.SelectedIndex == 1)
+            {
+                conta = new ContaPoupaça()
+                {
+                    Numero = numero,
+                    Titular = titular
+                };
+            }
+                
             this.aplicacaoPrincipal.AdicionaConta(conta);
+            this.Close();
         }
 
         private void CadastroDeContas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboTipoConta_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

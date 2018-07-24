@@ -52,6 +52,7 @@
       <DependentUpon>CadastroDeContas.cs</DependentUpon>
     </Compile>
     <Compile Include="ContaCorrente.cs" />
+    <Compile Include="ContaPoupaça.cs" />
     <Compile Include="Contas.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
