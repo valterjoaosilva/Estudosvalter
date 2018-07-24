@@ -13,7 +13,7 @@ namespace CaixaEletronicoBanco
     public partial class Form1 : Form
     {
         private Contas[] contas;
-        private int quantidadesDeContas;
+        private int quantidadeDeContas;
         public Form1()
         {
             InitializeComponent();
@@ -21,19 +21,19 @@ namespace CaixaEletronicoBanco
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            contas =  new Contas[10];
+            contas = new Contas[10];
 
             contas[0] = new ContaCorrente();
             contas[0].Numero = 1;
             contas[0].Titular = "Valter João da Silva Junior";
-            quantidadesDeContas++;
+            quantidadeDeContas++;
 
             contas[1] = new ContaCorrente();
             contas[1].Numero = 2;
             contas[1].Titular = "Samira Regina Oechsler";
-            quantidadesDeContas++;
+            quantidadeDeContas++;
 
-            for (int i = 0; i < quantidadesDeContas; i++)
+            for (int i = 0; i < quantidadeDeContas; i++)
             {
                 comboContas.Items.Add(contas[i].Titular);
             }
@@ -51,19 +51,19 @@ namespace CaixaEletronicoBanco
 
         }
 
-        public void AdicionaConta(Contas conta)
+        public void AdicionaConta(Contas contas)
         {
-            if (this.quantidadesDeContas == this.contas.Length)
+            if (this.quantidadeDeContas == this.contas.Length)
             {
-                Contas[] novo = new Contas[this.quantidadesDeContas * 2];
-                for (int i = 0; i < this.quantidadesDeContas; i++)
+                Contas[] novo = new Contas[this.quantidadeDeContas * 2];
+                for (int i = 0; i < this.quantidadeDeContas; i++)
                 {
                     novo[i] = this.contas[i];
                 }
             }
-            this.contas[this.quantidadesDeContas] = conta;
-            this.quantidadesDeContas++;
-            comboContas.Items.Add(conta.Titular);
+            this.contas[this.quantidadeDeContas] = contas;
+            this.quantidadeDeContas++;
+            comboContas.Items.Add(contas.Titular);
 
         }
 
@@ -71,6 +71,52 @@ namespace CaixaEletronicoBanco
         {
             CadastroDeContas cadastro = new CadastroDeContas(this);
             cadastro.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            RemoveConta(contas[comboContas.SelectedIndex]);
+
+            if (quantidadeDeContas > 1 )
+            {
+                textoTitular.Text = Convert.ToString(contas[comboContas.SelectedIndex].Titular);
+                textoNumero.Text = Convert.ToString(contas[comboContas.SelectedIndex].Numero);
+                textoSaldo.Text = Convert.ToString(contas[comboContas.SelectedIndex].Saldo);
+            }
+            else if (quantidadeDeContas == 1)
+            {
+                textoNumero.Clear();
+                textoTitular.Clear();
+                textoSaldo.Clear();
+            }
+            else
+            {
+                comboContas.ResetText();
+                textoNumero.Clear();
+                textoTitular.Clear();
+                textoSaldo.Clear();
+            }
+        }
+
+        public void RemoveConta(Contas conta)
+        {
+            comboContas.Items.Remove(conta.Titular);
+     
+            int i;
+            for (i = 0; i < quantidadeDeContas; i++)
+            {
+                if (contas[i] == conta)
+                {
+                    break;
+                }
+            }
+            while (i + 1 <= quantidadeDeContas)
+            {
+                contas[i] = contas[i + 1];
+                i++;
+            }
+
+            quantidadeDeContas--;
         }
     }
 }
