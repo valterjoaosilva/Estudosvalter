@@ -25,12 +25,8 @@ namespace Leitor
             {
                 Stream entrada = File.Open("texto.txt", FileMode.Open);
                 StreamReader leitor = new StreamReader(entrada);
-                string linha = leitor.ReadLine();
-                while (linha != null)
-                {
-                    texto.Text += linha;
-                    linha = leitor.ReadLine();
-                }
+                string conteudo = leitor.ReadToEnd();
+                texto.Text = conteudo;
                 leitor.Close();
                 entrada.Close(); 
             }
@@ -49,7 +45,14 @@ namespace Leitor
 
             escritor.Close();
             saida.Close();
-
+        }
+        private void botaoSave_Click(object sender, EventArgs e)
+        {
+            using (Stream saida = File.OpenWrite("texto.txt"))
+            using (StreamWriter escritor = new StreamWriter(saida))
+            {
+                escritor.Write(texto.Text);
+            }
         }
     }
 }
