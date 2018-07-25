@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBox", "ComboBox\ComboB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEletronicoBanco", "CaixaEletronicoBanco\CaixaEletronicoBanco.csproj", "{EDFB9DAE-BF95-4ACF-98E8-C2EEC72BEB6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leitor", "Leitor\Leitor.csproj", "{3DB613CF-C18D-487C-8D9F-10AE94156E58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{EDFB9DAE-BF95-4ACF-98E8-C2EEC72BEB6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDFB9DAE-BF95-4ACF-98E8-C2EEC72BEB6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDFB9DAE-BF95-4ACF-98E8-C2EEC72BEB6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DB613CF-C18D-487C-8D9F-10AE94156E58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB613CF-C18D-487C-8D9F-10AE94156E58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB613CF-C18D-487C-8D9F-10AE94156E58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB613CF-C18D-487C-8D9F-10AE94156E58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
