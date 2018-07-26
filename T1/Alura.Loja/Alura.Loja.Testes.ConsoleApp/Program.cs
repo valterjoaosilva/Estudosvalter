@@ -26,30 +26,28 @@ namespace Alura.Loja.Testes.ConsoleApp
 
 
             //Ataulizar produto
-            using (var repo = new LojaContext())
+            using (var repo = new ProdutoDAOEntity())
             {
-                Produto primeiro = repo.Produtos.First();
+                Produto primeiro = repo.Produtos().First();
                 primeiro.Nome = "Cassino Royale - Editado";
-                repo.Produtos.Update(primeiro);
-                repo.SaveChanges();
-
+                repo.Atualizar(primeiro);
             }
-            
+
 
 
         }
 
         private static void Excluirprodutos()
         {
-          using (var repo = new LojaContext())
+            using (var repo = new ProdutoDAOEntity())
             {
-                IList<Produto> produtos = repo.Produtos.ToList();
+                IList<Produto> produtos = repo.Produtos();
                 foreach (var item in produtos)
                 {
-                    repo.Produtos.Remove(item);
+                    repo.Remover(item);
 
                 }
-                repo.SaveChanges();
+
             }
         }
 
@@ -65,7 +63,7 @@ namespace Alura.Loja.Testes.ConsoleApp
                 }
 
             }
-                
+
 
         }
 
@@ -80,19 +78,6 @@ namespace Alura.Loja.Testes.ConsoleApp
             {
                 contexto.Produtos.Add(p);
                 contexto.SaveChanges();
-            }
-        }
-
-        private static void GravarUsandoAdoNet()
-        {
-            Produto p = new Produto();
-            p.Nome = "Harry Potter e a Ordem da Fênix";
-            p.Categoria = "Livros";
-            p.Preco = 19.89;
-
-            using (var repo = new ProdutoDAO())
-            {
-                repo.Adicionar(p);
             }
         }
     }
