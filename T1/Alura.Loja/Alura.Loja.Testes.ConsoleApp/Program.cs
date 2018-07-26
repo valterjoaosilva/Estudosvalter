@@ -12,7 +12,45 @@ namespace Alura.Loja.Testes.ConsoleApp
         {
             //GravarUsandoAdoNet();
             //GravarUsandoEntityu();
+            //RecuperarProdutos();
+            //Excluirprodutos();
+            //RecuperarProdutos();
+            AtualizarProduto();
+        }
+
+        private static void AtualizarProduto()
+        {
+            //Incluir produto
+            GravarUsandoEntityu();
             RecuperarProdutos();
+
+
+            //Ataulizar produto
+            using (var repo = new LojaContext())
+            {
+                Produto primeiro = repo.Produtos.First();
+                primeiro.Nome = "Cassino Royale - Editado";
+                repo.Produtos.Update(primeiro);
+                repo.SaveChanges();
+
+            }
+            
+
+
+        }
+
+        private static void Excluirprodutos()
+        {
+          using (var repo = new LojaContext())
+            {
+                IList<Produto> produtos = repo.Produtos.ToList();
+                foreach (var item in produtos)
+                {
+                    repo.Produtos.Remove(item);
+
+                }
+                repo.SaveChanges();
+            }
         }
 
         private static void RecuperarProdutos()
@@ -20,6 +58,7 @@ namespace Alura.Loja.Testes.ConsoleApp
             using (var repo = new LojaContext())
             {
                 IList<Produto> produtos = repo.Produtos.ToList();
+                Console.WriteLine("Foram encontrados {0} produtos (s).", produtos.Count);
                 foreach (var item in produtos)
                 {
                     Console.WriteLine(item.Nome);
