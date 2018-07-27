@@ -27,7 +27,7 @@ namespace Banco
             }
              
         }
-        public void transfere(double Valor, conta destino)
+        public void transfere(double Valor, Conta destino)
         {
             this.saca(Valor);
             destino.deposita(Valor);
