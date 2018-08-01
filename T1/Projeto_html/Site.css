@@ -1,20 +1,21 @@
 body{
     background-color: rgb(250, 255, 250);
-    font-size: "times new Roman" serif;
-}
-h1 {
-     font-size: 50px; 
+    font-family: "Crimson Text", serif;
+   }
+main h1 {
+    font-size: 50px; 
     background-color: rgb(120, 30, 60);
     color: rgb(250, 255, 250);
     text-align: center;
-    font-family:"arial" sans-serif;
+    font-family:"Open Sans Condensed",  sans-serif;
 }
 h2{
     font-size: 30px;
-    font-family: "arial" sans-serif;
+    font-family:"Open Sans Condensed", sans-serif;
     
 }
 p {
-    test-alingn:justfy;
+    text-align:justify;
     font-size: 20px;
+    
 }
