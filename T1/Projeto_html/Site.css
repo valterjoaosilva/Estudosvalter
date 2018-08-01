@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(250, 255, 250);
+    font-size: "times new Roman" serif;
+}
+h1 {
+     font-size: 50px; 
+    background-color: rgb(120, 30, 60);
+    color: rgb(250, 255, 250);
+    text-align: center;
+    font-family:"arial" sans-serif;
+}
+h2{
+    font-size: 30px;
+    font-family: "arial" sans-serif;
+    
+}
+p {
+    test-alingn:justfy;
+    font-size: 20px;
+}
