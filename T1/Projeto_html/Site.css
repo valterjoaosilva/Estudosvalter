@@ -2,7 +2,8 @@ body{
     background-color: rgb(250, 255, 250);
     font-family: "Crimson Text", serif;
    }
-main h1 {
+
+.titulo_site {
     font-size: 60px; 
     background-color: rgb(120, 30, 60);
     color: rgb(250, 255, 250);
@@ -13,7 +14,7 @@ main h1 {
     line-height: 3;
     border-bottom: 10PX solid black;
 }
-h2{
+.subtitulo_site{
     font-size: 30px;
     font-family:"Open Sans Condensed", sans-serif;
     
@@ -24,7 +25,7 @@ p {
     margin: 20px 0;
     
 }
-blockquote{
+.citacao_site {
     background-color: #D3DDDA;
     padding: 16px;
     border: 10PX solid #C2CCCA;
@@ -34,23 +35,53 @@ blockquote{
     margin: 20px 40px;
     box-sizing: border-box;
 }
-
-main div{
-    width: 720px;
-    padding: 30px 0;
-        }
-aside{
-    background-color: #8B0000;
+.navegacao_site {
+    background-color: #3C1D3D;
+    color: #F2FFFC;
+    padding: 20px;
     text-align: center;
 }
+.corpo_site{
+    width: 720px;
+    margin: 100px;
+    margin-top: 10px;
+    padding: 30px;
+    padding-bottom: 80px;
+}
 
-aside h1{
+.icones-sociais li{
+    display: inline-block;
+}
+.leia_mais {
+    padding: 8px;
+    margin: 16px;
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    background-color: #E6E7E8;
+    
+}
+
+nav h1{
     font-size: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 25px;    
+     
+}nav a{
+    color: inherit;
 }
 strong{
     font-weight: bold;
 }
 em{
     font-style: italic;
+}
+footer {
+    background-color: #000;
+    color: #F2FFFC;
+    padding: 20PX;
+}
+article {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
 }
