@@ -1,0 +1,57 @@
+body{
+    background-color: rgb(250, 255, 250);
+    font-family: "Crimson Text", serif;
+    font-size: 120%;
+	line-height: 1.5;
+   }
+
+.titulo_site {
+    font-size: 60px; 
+    background-color: rgb(120, 30, 60);
+    color: rgb(250, 255, 250);
+    text-align: center;
+    padding: 25px;
+    border-bottom: 10PX solid black;
+    text-transform: uppercase;
+}
+
+.subtitulo_site{
+    font-size: 30px;
+    font-family:"Open Sans Condensed", sans-serif;
+    clear: both;
+    
+}
+p {
+    text-align:justify;
+    margin: 20px 0;
+    
+}
+article {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #b5a9a9;
+    margin-bottom: 20px;
+}
+.leia_mais {
+    padding: 8px;
+    margin: 16px;
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    background-color: #E6E7E8;
+    
+}
+titulo_site h1{
+    text-transform: uppercase;
+}
+h1 {
+    text-transform: uppercase;
+}
+strong{
+    font-weight: bold;
+}
+footer {
+    background-color: #000;
+    color: #F2FFFC;
+    padding: 20PX;
+}
+

@@ -26,7 +26,30 @@ p {
     margin: 20px 0;
     
 }
-
+.citacao_site {
+    background-color: #D3DDDA;
+    padding: 20px;
+    border: 10PX solid #C2CCCA;
+    border-bottom-color: #333;
+    border-right-color: #C2CCCA;
+    border-left-color: #C2CCCA;
+    width: 250px;
+    margin: 0px 10px;
+    box-sizing: border-box;
+    float: right;
+}
+.citacao_site.fiat {
+    float: right;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    
+}
+.citacao_site.petrobras {
+    float: left;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
 .navegacao-site {
     clear:right;
 	width: 15%;
@@ -52,11 +75,6 @@ main {
     margin: auto;
     padding: 30px;
     }
-article {
-    padding-bottom: 30px;
-    border-bottom: 1px solid #b5a9a9;
-    margin-bottom: 20px;
-}
 
 .icones-sociais li {
     display: inline-block;
@@ -76,15 +94,7 @@ background-image: url(../img/twitter.png);
 .linkedin {
 background-image: url(../img/linkedin.png);
 }
-.leia_mais {
-    padding: 8px;
-    margin: 16px;
-    display: block;
-    font-size: 24px;
-    text-align: center;
-    background-color: #E6E7E8;
-    
-}
+
 titulo_site h1{
     text-transform: uppercase;
 }
