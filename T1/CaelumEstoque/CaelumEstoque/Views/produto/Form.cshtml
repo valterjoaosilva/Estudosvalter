@@ -15,6 +15,7 @@
         <form action="/Produto/Adiciona" method="post">
             <label for="nome">Nome:</label>
             <input id="nome" name="produto.Nome" />
+            @Html.ValidationMessage("produto.nome")
 
             <label for="preco">Preco:</label>
             <input id="preco" name="produto.Preco" />
@@ -34,7 +35,7 @@
             </select>
 
             <input type="submit" value="Cadastrar" />
-         </form>
+        </form>
     </div>
 </body>
 </html>
