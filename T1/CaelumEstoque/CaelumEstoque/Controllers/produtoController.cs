@@ -10,13 +10,13 @@ namespace CaelumEstoque.Controllers
 {
     public class ProdutoController : Controller
     {
+        [Route("produtos", Name ="ListaProdutos")]
         // GET: produto
         public ActionResult Index()
         {
             ProdutosDAO dao = new ProdutosDAO();
             IList<Produto> produtos = dao.Lista();
-            ViewBag.Produtos = produtos; 
-            return View();
+            return View(produtos);
         }
         public ActionResult Form()
         {
@@ -28,13 +28,13 @@ namespace CaelumEstoque.Controllers
         [HttpPost]
         public ActionResult Adiciona(Produto produto)
         {
-            if(ModelState.IsValid)
-            { 
+            if (ModelState.IsValid)
+            {
                 ProdutosDAO dao = new ProdutosDAO();
                 dao.Adiciona(produto);
 
                 return RedirectToAction("Index", "Produto");
-                
+
             }
             else
             {
@@ -43,18 +43,17 @@ namespace CaelumEstoque.Controllers
                 ViewBag.Categorias = categoriasDAO.Lista();
                 return View("Form");
             }
-           
-            
+
+
 
         }
-
-        public ActionResult Vizualiza(int produtoId)
+        [Route("produtos/{id}", Name ="VisualizaProduto")]
+        public ActionResult Visualiza(int id)
         {
             ProdutosDAO dao = new ProdutosDAO();
-            Produto produto = dao.BuscaPorId(produtoId);
+            Produto produto = dao.BuscaPorId(id);
             ViewBag.Produto = produto;
             return View();
         }
-            
     }
 }

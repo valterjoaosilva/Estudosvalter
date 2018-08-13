@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Vizualiza</title>
+    <title>Visualiza</title>
 </head>
 <body>
     <div>
@@ -17,7 +17,9 @@
         Quantidade: @ViewBag.Produto.Quantidade<br />
         Preco: @ViewBag.Produto.Preco<br />
         Descricao: @ViewBag.Produto.Descricao<br />
-        Categoria: @ViewBag.Produto.Categoria<br />
+        Categoria: @ViewBag.Produto.Categoria.Nome<br />
+
+        @Html.RouteLink("Voltar para a lista", "ListaProdutos")
 
     </div>
 </body>
