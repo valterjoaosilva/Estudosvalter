@@ -38,6 +38,7 @@ namespace CaelumEstoque.Controllers
             }
             else
             {
+                ViewBag.Produto = produto;
                 CategoriasDAO categoriasDAO = new CategoriasDAO();
                 ViewBag.Categorias = categoriasDAO.Lista();
                 return View("Form");
@@ -47,7 +48,13 @@ namespace CaelumEstoque.Controllers
 
         }
 
-        
+        public ActionResult Vizualiza(int produtoId)
+        {
+            ProdutosDAO dao = new ProdutosDAO();
+            Produto produto = dao.BuscaPorId(produtoId);
+            ViewBag.Produto = produto;
+            return View();
+        }
             
     }
 }
