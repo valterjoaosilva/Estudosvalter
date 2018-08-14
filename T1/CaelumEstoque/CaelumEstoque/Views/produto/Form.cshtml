@@ -1,26 +1,26 @@
 ﻿<div>
     <form action="/Produto/Adiciona" method="post">
         <label for="nome">Nome:</label>
-        <input id="nome" name="produto.Nome" />
+        <input id="nome" name="produto.Nome" class="form-control"/>
         @Html.ValidationMessage("produto.nome")
 
         <label for="preco">Preco:</label>
-        <input id="preco" name="produto.Preco" />
+        <input id="preco" name="produto.Preco" class="form-control" />
 
         <label for="quantidade">Quantidade:</label>
-        <input id="nome" name="produto.Quantidade" />
+        <input id="nome" name="produto.Quantidade" class="form-control"/>
 
         <label for="descricao">Descricao:</label>
-        <input id="descricao" name="produto.Descricao" />
+        <input id="descricao" name="produto.Descricao" class="form-control"/>
 
         <label for=" categoria">Categoria:</label>
-        <select id="categoria" name="produto.CategoriaId">
+        <select id="categoria" name="produto.CategoriaId" class="form-control">
             @foreach (var categoria in ViewBag.Categorias)
             {
                 <option value="@categoria.Id">@categoria.Nome</option>
             }
         </select>
 
-        <input type="submit" value="Cadastrar" />
+        <input type="submit" value="Cadastrar" class="form-control"/>
     </form>
 </div>
