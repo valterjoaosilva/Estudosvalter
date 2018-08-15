@@ -12,6 +12,7 @@ namespace CursoDesingPatterns
         {
             IImposto iss = new ISS();
             IImposto icms = new ICMS();
+            IImposto iccc = new ICCC();
 
             Orcamento orcamento = new Orcamento(500.0);
 
@@ -19,6 +20,7 @@ namespace CursoDesingPatterns
 
             calculador.RealizaCalculo(orcamento, icms);
             calculador.RealizaCalculo(orcamento, iss);
+            calculador.RealizaCalculo(orcamento, iccc);
 
             Console.ReadKey();
 

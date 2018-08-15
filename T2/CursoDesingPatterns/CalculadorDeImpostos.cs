@@ -10,8 +10,8 @@ namespace CursoDesingPatterns
     {
         public void RealizaCalculo(Orcamento orcamento, IImposto imposto)
         {
-            double icms = new ICMS().Calcula(orcamento);
-            Console.WriteLine(icms);
+            double valor =  imposto.Calcula(orcamento);
+            Console.WriteLine(valor);
         }
     }
 }
