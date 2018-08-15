@@ -8,19 +8,11 @@ namespace CursoDesingPatterns
 {
     public class CalculadorDeImpostos
     {
-        public void RealizaCalculo(Orcameto orcamento, Imposto imposto)
+        public void RealizaCalculo(Orcamento orcamento, IImposto imposto)
         {
-
-            double icms = new ICMS().calculaICMS(orcamento);
+            double icms = new ICMS().Calcula(orcamento);
             Console.WriteLine(icms);
-                   
         }
-
-       
-        }
-    }
-
-    public class Orcameto
-    {
     }
 }
+

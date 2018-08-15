@@ -13,7 +13,9 @@ namespace CursoDesingPatterns
         public Orcamento(double valor)
         {
             this.Valor = valor; 
-        } 
+        }
+        
+        public Orcamento() { }
 
     }
 }
