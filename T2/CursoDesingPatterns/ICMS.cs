@@ -8,9 +8,11 @@ namespace CursoDesingPatterns
 {
     public class ICMS : IImposto
     {
-        public double Calcula(Orcamento orcamento)
+        public ICMS(IImposto outroImposto) : base(outroImposto) { }
+        public ICMS() : base() { }
+        public override double Calcula(Orcamento orcamento)
         {
-            return orcamento.Valor * 0.5;
+            return orcamento.Valor * 0.1 + CalculoDoOutroImposto(orcamento);
         }
     }
 }

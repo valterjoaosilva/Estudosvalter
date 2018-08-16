@@ -6,8 +6,25 @@ using System.Threading.Tasks;
 
 namespace CursoDesingPatterns
 {
-    public interface IImposto
+    public abstract class IImposto
     {
-        double Calcula(Orcamento orcametno);
+        public IImposto OutroImposto { get; set; }
+
+        public IImposto(IImposto outroImposto)
+        {
+            this.OutroImposto = outroImposto;
+        }
+
+        public IImposto()
+        {
+            this.OutroImposto = null;
+        }
+
+        public abstract double Calcula(Orcamento orcametno);
+        protected double CalculoDoOutroImposto(Orcamento orcamento)
+        {
+            if (OutroImposto == null) return 0;
+            return OutroImposto.Calcula(orcamento);
+        }
     }
 }
