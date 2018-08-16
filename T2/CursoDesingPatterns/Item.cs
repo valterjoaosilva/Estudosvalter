@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoDesingPatterns
 {
-    class Item
+    public class Item
     {
         public string Nome { get; private set; }
         public double Valor { get; private set; }
