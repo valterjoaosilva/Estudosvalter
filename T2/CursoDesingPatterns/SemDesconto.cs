@@ -10,6 +10,7 @@ namespace CursoDesingPatterns
     {
         public IDesconto Proximo { get; set; }
 
+
         public double Desconta(Orcamento orcamento)
         {
             return 0;

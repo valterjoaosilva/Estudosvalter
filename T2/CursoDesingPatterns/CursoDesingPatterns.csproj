@@ -42,12 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aprovado.cs" />
     <Compile Include="Arrojado.cs" />
     <Compile Include="CalculadorDeDescontos.cs" />
     <Compile Include="CalculadorDeImpostos.cs" />
     <Compile Include="Conservador.cs" />
     <Compile Include="Conta.cs" />
+    <Compile Include="NotaFiscalBuilder.cs" />
     <Compile Include="DescontoPorVendaCasada.cs" />
+    <Compile Include="EmAprovacao.cs" />
+    <Compile Include="Finalizado.cs" />
     <Compile Include="ICPP.cs" />
     <Compile Include="IDesconto.cs" />
     <Compile Include="DescontoPorCincoItens.cs" />
@@ -58,16 +62,19 @@
     <Compile Include="IImposto.cs" />
     <Compile Include="IInvestimento.cs" />
     <Compile Include="IKCV.cs" />
+    <Compile Include="Interface1.cs" />
     <Compile Include="ISS.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="itemDaNota.cs" />
     <Compile Include="Moderado.cs" />
+    <Compile Include="NotaFiscal.cs" />
     <Compile Include="Orcamento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RealizadorDeInvestimento.cs" />
+    <Compile Include="Reprovado.cs" />
     <Compile Include="SemDesconto.cs" />
     <Compile Include="TemplateDeImpostoCondicional.cs" />
-    <Compile Include="TestaCorrente.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

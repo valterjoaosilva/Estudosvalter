@@ -9,10 +9,10 @@ namespace CursoDesingPatterns
     public class DescontoPorVendaCasada : IDesconto
     {
         public IDesconto Proximo { get; set; }
-        public double Calcula(Orcamento orcamento)
+        public double Desconta(Orcamento orcamento)
         {
             if (aconteceuVendaCasadaEm(orcamento)) return orcamento.Valor * 0.05;
-            else return Proximo.Calcula(orcamento);
+            else return Proximo.Desconta(orcamento);
         }
 
         private bool aconteceuVendaCasadaEm(Orcamento orcamento)

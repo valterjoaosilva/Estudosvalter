@@ -10,13 +10,13 @@ namespace CursoDesingPatterns
     {
         public IDesconto Proximo { get; set; }
       
-        public double Calcula(Orcamento orcamento)
+        public double Desconta(Orcamento orcamento)
         {
             if (orcamento.Itens.Count > 5)
             {
                 return orcamento.Valor * 0.1;
             }
-            return Proximo.Calcula(orcamento);
+            return Proximo.Desconta(orcamento);
         }
                        
                

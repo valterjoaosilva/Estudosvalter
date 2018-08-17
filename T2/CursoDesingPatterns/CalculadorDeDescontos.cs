@@ -18,7 +18,7 @@ namespace CursoDesingPatterns
             d1.Proximo = d2;
             d2.Proximo = d3;
 
-            return d1.Calcula(orcamento);
+            return d1.Desconta(orcamento);
             
         }
     }
