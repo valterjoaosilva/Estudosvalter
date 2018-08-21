@@ -2,6 +2,8 @@
 using DesignPatterns2.cap2;
 using DesignPatterns2.Cap3;
 using DesignPatterns2.Cap4;
+using DesignPatterns2.cap5;
+using DesignPatterns2.Cap6;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,14 +15,16 @@ namespace DesignPatterns2
 {
     class Program
     {
+
+        public static MensagemPorEmail MensagemPorEmail { get; private set; }
+        
+
         static void Main(string[] args)
         {
+            MensagemPorEmail = new MensagemPorEmail("valter");
+            mensagem.Envia();
             
-           IExpressao esquerda = new Soma(new Numero(1), new Numero(10));
-           IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
-           IExpressao soma = new Soma(esquerda, direita);
-
-           Console.WriteLine(soma.Avalia()); 
+         
         }
     }
 }
