@@ -15,13 +15,14 @@ namespace DesignPatterns2
 {
     class Program
     {
-
-        public static MensagemPorEmail MensagemPorEmail { get; private set; }
-        
-
         static void Main(string[] args)
         {
-            MensagemPorEmail = new MensagemPorEmail("valter");
+            //IMensagem mensagem = new MensagemPorEmail("valter");
+            IMensagem mensagem = new MensagemAdministrativa("valter");
+           // IMensagem mensagem = new MensagemCliente("valter")
+            IEnviador enviador = new EnviaPorEmail();
+            //IEnviador enviador = new EnviaPorSMS();
+            mensagem.Enviador = enviador;
             mensagem.Envia();
             
          
