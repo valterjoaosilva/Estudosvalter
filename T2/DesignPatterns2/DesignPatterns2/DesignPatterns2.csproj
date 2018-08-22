@@ -76,8 +76,10 @@
     <Compile Include="Cap7\Pedido.cs" />
     <Compile Include="Cap7\Status.cs" />
     <Compile Include="cap8\Cliente.cs" />
+    <Compile Include="cap8\GeradorDeXml.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XlmSerializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -5,9 +5,11 @@ using DesignPatterns2.Cap4;
 using DesignPatterns2.cap5;
 using DesignPatterns2.Cap6;
 using DesignPatterns2.Cap7;
+using DesignPatterns2.cap8;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,15 +20,16 @@ namespace DesignPatterns2
     {
         static void Main(string[] args)
         {
-            FilaDeTrabalho fila = new FilaDeTrabalho();
-            Pedido pedido1 = new Pedido("Mauricio", 100.0);
-            Pedido pedido2 = new Pedido("Marcelo", 200.0);
-            fila.Adiciona(new PagaPedido(pedido1));
-            fila.Adiciona(new PagaPedido(pedido2));
+            Cliente cliente = new Cliente();
 
-            fila.Adiciona(new FinalizaPedido(pedido1));
+            cliente.Nome = "valter";
+            cliente.Endereco = "Rua Divinopolis";
+            cliente.DataDeNascimento = DateTime.Now;
 
-            fila.Processa();
+            String xml = new GeradorDeXml().GeraXml(cliente);
+
+            Console.WriteLine(xml);
+
 
             
          
