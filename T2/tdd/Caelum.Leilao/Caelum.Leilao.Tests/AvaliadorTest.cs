@@ -10,7 +10,7 @@ namespace Caelum.Leilao
     public class AvaliadorTest
     {
         [Test]
-        public void DeveCalcularAMedia()
+        public void DeveEntenderLancesEmOrdemCrescente()
         {
             Usuario joao = new Usuario("Joao");
             Usuario jose = new Usuario("Jose");
@@ -26,10 +26,14 @@ namespace Caelum.Leilao
             Avaliador leiloeiro = new Avaliador();
             leiloeiro.Avalia(leilao);
 
+            double maiorEsperado = 400;
+            double menorEsperado = 250;
+
             
-            Assert.AreEqual(400, leiloeiro.Media, 0.0001);
+            Assert.AreEqual(maiorEsperado, leiloeiro.MaiorLance);
+            Assert.AreEqual(menorEsperado, leiloeiro.MenorLance);
 
         }
-
+       
     }
 }
