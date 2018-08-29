@@ -7,11 +7,11 @@ using NUnit.Framework;
 namespace Caelum.Leilao
 {
     [TestFixture]
-    public class TesteDoAvaliador
+    public class AvaliadorTest
     {
         [Test]
-        public void DeveEntenderLancesEmOrdemCrescente()
-        { 
+        public void DeveCalcularAMedia()
+        {
             Usuario joao = new Usuario("Joao");
             Usuario jose = new Usuario("Jose");
             Usuario maria = new Usuario("Maria");
@@ -21,23 +21,15 @@ namespace Caelum.Leilao
             leilao.Propoe(new Lance(maria, 250.0));
             leilao.Propoe(new Lance(joao, 300.0));
             leilao.Propoe(new Lance(jose, 400.0));
-            
+
 
             Avaliador leiloeiro = new Avaliador();
             leiloeiro.Avalia(leilao);
 
-            double maiorEsperado = 400;
-            double menorEsperado = 250; 
+            
+            Assert.AreEqual(400, leiloeiro.Media, 0.0001);
 
-            Assert.AreEqual(maiorEsperado, leiloeiro.MaiorLance);
-            Assert.AreEqual(menorEsperado, leiloeiro.MenorLance);
+        }
 
-           
-        }
-        [Test]
-        public void OutroCenario()
-        {
-            //implementar ....
-        }
     }
 }
