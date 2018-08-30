@@ -67,14 +67,19 @@ namespace Caelum.Leilao
             leilao.Propoe(new Lance(joao, 100.0));
             leilao.Propoe(new Lance(maria, 200.0));
             leilao.Propoe(new Lance(joao, 300.0));
-            leilao.Propoe(new Lance(maria, 300.0));
+            leilao.Propoe(new Lance(maria, 400.0));
 
 
             Avaliador leiloeiro = new Avaliador();
             leiloeiro.Avalia(leilao);
 
             var maiores = leiloeiro.TresMaiores;
+
+
             Assert.AreEqual(3, maiores.Count);
+            Assert.AreEqual(400, maiores[0].Valor, 0.0001);
+            Assert.AreEqual(300, maiores[1].Valor, 0.0001);
+            Assert.AreEqual(200, maiores[2].Valor, 0.0001);
         }
 
 
