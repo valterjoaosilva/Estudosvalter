@@ -34,6 +34,49 @@ namespace Caelum.Leilao
             Assert.AreEqual(menorEsperado, leiloeiro.MenorLance);
 
         }
-       
+
+        [Test]
+        public void DeveEntenderLeilaoComApenasUmLance()
+        {
+            Usuario joao = new Usuario("Joao");
+            
+            Leilao leilao = new Leilao("Playstation 3 Novo");
+
+            
+            leilao.Propoe(new Lance(joao, 1000.0));
+            
+            Avaliador leiloeiro = new Avaliador();
+            leiloeiro.Avalia(leilao);
+                       
+
+            Assert.AreEqual(1000, leiloeiro.MaiorLance, 0.0001);
+            Assert.AreEqual(1000, leiloeiro.MenorLance, 0.0001);
+
+
+        }
+        [Test]
+        public void DeveEncontrarOsTresMaioresLances()
+        {
+            Usuario joao = new Usuario("Joao");
+            Usuario maria = new Usuario("Maria");
+
+            Leilao leilao = new Leilao("Playstation 3 Novo");
+
+
+
+            leilao.Propoe(new Lance(joao, 100.0));
+            leilao.Propoe(new Lance(maria, 200.0));
+            leilao.Propoe(new Lance(joao, 300.0));
+            leilao.Propoe(new Lance(maria, 300.0));
+
+
+            Avaliador leiloeiro = new Avaliador();
+            leiloeiro.Avalia(leilao);
+
+            var maiores = leiloeiro.TresMaiores;
+            Assert.AreEqual(3, maiores.Count);
+        }
+
+
     }
 }
