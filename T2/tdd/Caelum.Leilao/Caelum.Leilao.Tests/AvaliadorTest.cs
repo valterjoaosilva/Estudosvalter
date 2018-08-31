@@ -81,6 +81,8 @@ namespace Caelum.Leilao
             Assert.AreEqual(300, maiores[1].Valor, 0.0001);
             Assert.AreEqual(200, maiores[2].Valor, 0.0001);
         }
+     
+
 
 
     }

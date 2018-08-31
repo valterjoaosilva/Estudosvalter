@@ -16,6 +16,16 @@ namespace Caelum.Leilao
             this.Id = id;
             this.Nome = nome;
         }
+        public bool Equals(object obj)
+        {
+            if (obj == null || this.GetType() != obj.GetType())
+            {
+                return false;
+            }
+            Usuario outro = (Usuario)obj;
+
+            return outro.Id == this.Id && outro.Nome.Equals(this.Nome);
+        }
 
     }
 }

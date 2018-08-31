@@ -33,6 +33,53 @@ namespace Caelum.Leilao
             Assert.AreEqual(3000, leilao.Lances[1].Valor, 0.0001);
 
         }
+        [Test]
+        public void NaoDeveAceitarDoisLancesSeguidosDoMesmoUsuario()
+        {
+            Leilao leilao = new Leilao("Macbook pro 15");
+            var steveJobs = new Usuario("Steve Jobs");
+
+            leilao.Propoe(new Lance(steveJobs, 2000));
+            leilao.Propoe(new Lance(steveJobs, 3000));
+
+
+            Assert.AreEqual(1, leilao.Lances.Count);
+            Assert.AreEqual(2000, leilao.Lances[0].Valor, 0.0001);
+        }
+        [Test]
+        public void NaoDeveAceitarMaisDoQue5LancesDeUmMesmoUsuario()
+        {
+            Leilao leilao = new Leilao("macbook Pro 15");
+            Usuario steveJobs = new Usuario("Steve Jobs");
+            Usuario billGates = new Usuario("Bill Gates");
+
+            leilao.Propoe(new Lance(steveJobs, 2000));
+            leilao.Propoe(new Lance(billGates, 3000));
+
+            leilao.Propoe(new Lance(steveJobs, 4000));
+            leilao.Propoe(new Lance(billGates, 5000));
+
+            leilao.Propoe(new Lance(steveJobs, 6000));
+            leilao.Propoe(new Lance(billGates, 7000));
+
+            leilao.Propoe(new Lance(steveJobs, 8000));
+            leilao.Propoe(new Lance(billGates, 9000));
+
+            leilao.Propoe(new Lance(steveJobs, 10000));
+            leilao.Propoe(new Lance(billGates, 11000));
+
+            leilao.Propoe(new Lance(steveJobs, 10000));
+
+            Assert.AreEqual(10, leilao.Lances.Count);
+            var ultimo = leilao.Lances.Count - 1;
+            Lance ultimoLance = leilao.Lances[ultimo];
+
+            Assert.AreEqual(11000, ultimoLance.Valor, 0.00001);
+        }
+
+
+
 
     }
+  
 }
