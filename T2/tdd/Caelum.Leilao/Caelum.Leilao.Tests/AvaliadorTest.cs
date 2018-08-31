@@ -9,12 +9,25 @@ namespace Caelum.Leilao
     [TestFixture]
     public class AvaliadorTest
     {
+        private Avaliador leiloeiro;
+        private Usuario joao;
+        private Usuario jose;
+        private Usuario maria;
+
+        [SetUp]
+        public void CriaAvaliador()
+        {
+            this.leiloeiro = new Avaliador();
+            Console.WriteLine("Executando o Cria Avaliador");
+
+
+            this.joao = new Usuario("Joao");
+            this.jose = new Usuario("Jose");
+            this.maria = new Usuario("Maria");
+        }
         [Test]
         public void DeveEntenderLancesEmOrdemCrescente()
         {
-            Usuario joao = new Usuario("Joao");
-            Usuario jose = new Usuario("Jose");
-            Usuario maria = new Usuario("Maria");
 
             Leilao leilao = new Leilao("Playstation 3 Novo");
 
@@ -23,7 +36,7 @@ namespace Caelum.Leilao
             leilao.Propoe(new Lance(jose, 400.0));
 
 
-            Avaliador leiloeiro = new Avaliador();
+     
             leiloeiro.Avalia(leilao);
 
             double maiorEsperado = 400;
@@ -38,14 +51,14 @@ namespace Caelum.Leilao
         [Test]
         public void DeveEntenderLeilaoComApenasUmLance()
         {
-            Usuario joao = new Usuario("Joao");
+          
             
-            Leilao leilao = new Leilao("Playstation 3 Novo");
+            Leilao leilao = new CriadorDeLeilao().Para("Playstation 3 Novo")
+                      
+            .Lance(joao, 1000)
+            .Constroi();
 
-            
-            leilao.Propoe(new Lance(joao, 1000.0));
-            
-            Avaliador leiloeiro = new Avaliador();
+     
             leiloeiro.Avalia(leilao);
                        
 
@@ -57,20 +70,17 @@ namespace Caelum.Leilao
         [Test]
         public void DeveEncontrarOsTresMaioresLances()
         {
-            Usuario joao = new Usuario("Joao");
-            Usuario maria = new Usuario("Maria");
-
-            Leilao leilao = new Leilao("Playstation 3 Novo");
 
 
+            Leilao leilao = new CriadorDeLeilao().Para("Playstation")
+                .Lance(joao, 100)
+                .Lance(maria, 200)
+                .Lance(joao, 300)
+                .Lance(maria, 400)
+                .Constroi();
 
-            leilao.Propoe(new Lance(joao, 100.0));
-            leilao.Propoe(new Lance(maria, 200.0));
-            leilao.Propoe(new Lance(joao, 300.0));
-            leilao.Propoe(new Lance(maria, 400.0));
 
-
-            Avaliador leiloeiro = new Avaliador();
+                     
             leiloeiro.Avalia(leilao);
 
             var maiores = leiloeiro.TresMaiores;
