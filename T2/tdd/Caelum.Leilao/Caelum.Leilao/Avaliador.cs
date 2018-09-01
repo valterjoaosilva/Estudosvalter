@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,10 +15,6 @@ namespace Caelum.Leilao
         
         public void Avalia(Leilao leilao)
         {
-            if (leilao.Lance.Count == 0)
-            {
-                throw new Exception("Não é possível avaliar leilao sem lance");
-            }
         
             foreach (Lance lance in leilao.Lances)
             {
