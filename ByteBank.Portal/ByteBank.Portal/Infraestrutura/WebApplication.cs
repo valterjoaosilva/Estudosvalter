@@ -46,36 +46,23 @@ namespace ByteBank.Portal.Infraestrutura
 
             var path = requisicao.Url.AbsolutePath;
 
-            if (path == "/Assets/css/styles.css")
+            var assembly = Assembly.GetExecutingAssembly();
+            var nomeResource = Utilidades.ConverterParthParaNomeAssembly(path);
+
+            var resourceStream = assembly.GetManifestResourceStream(nomeResource);
+
+            if(resourceStream == null)
             {
-
-                var assembly = Assembly.GetExecutingAssembly();
-                var nomeResource = "ByteBank.Portal.Assets.css.styles.css";
-
-                var resourceStream = assembly.GetManifestResourceStream(nomeResource);
-                var bytesResource = new byte[resourceStream.Length];
-
-                resourceStream.Read(bytesResource, 0, (int)resourceStream.Length);
-
-                resposta.ContentType = "text/css; charset=utf-8";
-                resposta.StatusCode = 200;
-                resposta.ContentLength64 = resourceStream.Length;
-
-                resposta.OutputStream.Write(bytesResource, 0, bytesResource.Length);
-
+                resposta.StatusCode = 400;
                 resposta.OutputStream.Close();
             }
-            else if (path == "/Assets/js/main.js")
+            else
             {
-                var assembly = Assembly.GetExecutingAssembly();
-                var nomeResource = "ByteBank.Portal.Assets.js.main.js";
-
-                var resourceStream = assembly.GetManifestResourceStream(nomeResource);
                 var bytesResource = new byte[resourceStream.Length];
 
                 resourceStream.Read(bytesResource, 0, (int)resourceStream.Length);
 
-                resposta.ContentType = "text/css; charset=utf-8";
+                resposta.ContentType = Utilidades.ObterTipoDeConteudo(path);
                 resposta.StatusCode = 200;
                 resposta.ContentLength64 = resourceStream.Length;
 
@@ -85,9 +72,7 @@ namespace ByteBank.Portal.Infraestrutura
             }
 
 
-
-
-            httpListener.Stop();
+           httpListener.Stop();
         }
     }
 }
