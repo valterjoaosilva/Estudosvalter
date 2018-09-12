@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ByteBank.Portal.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -13,6 +14,7 @@ namespace ByteBank.Portal.Infraestrutura
     {
         private readonly string[] _prefixos;
         private char[] respostaConteudo;
+        private char[] paginaConteudo;
 
         public WebApplication(string[] prefixos)
         {
@@ -46,33 +48,51 @@ namespace ByteBank.Portal.Infraestrutura
 
             var path = requisicao.Url.AbsolutePath;
 
-            var assembly = Assembly.GetExecutingAssembly();
-            var nomeResource = Utilidades.ConverterParthParaNomeAssembly(path);
-
-            var resourceStream = assembly.GetManifestResourceStream(nomeResource);
-
-            if(resourceStream == null)
+            if (Utilidades.EhArquivo(path))
             {
-                resposta.StatusCode = 400;
-                resposta.OutputStream.Close();
+                var manipulador = new ManipuladorRequisicaoArquivo();
+                manipulador.Maipular(resposta, path)
             }
-            else
-            {
-                var bytesResource = new byte[resourceStream.Length];
+                else if (path == "/Cambio/MXN")
+                {
+                    var controller = new CambioController();
+                    var paginaConteudo = controller.MXN();
+                }
 
-                resourceStream.Read(bytesResource, 0, (int)resourceStream.Length);
-
-                resposta.ContentType = Utilidades.ObterTipoDeConteudo(path);
+                var bufferArquivo = Encoding.UTF8.GetBytes(paginaConteudo);
                 resposta.StatusCode = 200;
-                resposta.ContentLength64 = resourceStream.Length;
+                resposta.ContentType = "text/html; charset=uft-8";
+                resposta.ContentLength64 = bufferArquivo.Length;
 
-                resposta.OutputStream.Write(bytesResource, 0, bytesResource.Length);
-
+                resposta.OutputStream.Write(bufferArquivo, 0, bufferArquivo.Lenght);
                 resposta.OutputStream.Close();
+        }
+            else if(path == "/Cambio/USD")
+         
+
+            public string USD()
+            {
+
+                var valorFinal = _cambioService.Calcular("USD", "BRL", 1);
+                var nomeCompletoResource = "ByteBank.Portal.View.Cambio.MXN.html";
+                var assembly = Assembly.GetExecutingAssembly();
+
+                var streamRecurso = assembly.GetManifestResourceStream(nomeCompletoResource);
+
+                var streamLeitura = new StreamReader(streamRecurso);
+                var textoPagina = streamLeitura.ReadToEnd();
+
+                var textoResultado = textoPagina.Replace("VALOR_EM_REAIS", valorFinal.ToString());
+
+                Return textoResultado;
+
+
+
             }
 
 
-           httpListener.Stop();
+
+            httpListener.Stop();
         }
     }
 }
