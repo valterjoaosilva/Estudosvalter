@@ -1,0 +1,1 @@
+<td style="background-color:@(Agenda.exiteMarcacaoHorario(Horarios.hora, Medico.id) == 'S' ? "red" : "white")">@horarios.hora</td>
