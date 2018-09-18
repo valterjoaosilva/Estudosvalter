@@ -34,10 +34,6 @@ namespace ByteBank.Portal.Infraestrutura
 
                 throw new NotImplementedException("Tipo de conteúdo não previsto!");
         }
-
-        internal static bool EhArquivo(string path)
-        {
-            throw new NotImplementedException();
-        }
+            
     }
 }
