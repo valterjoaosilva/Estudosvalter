@@ -20,12 +20,10 @@ console.log(erros);
 
     tabela.appendChild(pacienteTr);
 
-   adicionaPacienteNaTabela(paciente);
-
     form.reset();
     var mensagemErro = document.querySelector("#mensagem-erro");
     mensagensErro.innerHTML = "";
-
+});
 
 function exibeMensagensDeErro(erros){
     var ul = document.querySelector("#mensagens-erro");
@@ -36,13 +34,7 @@ function exibeMensagensDeErro(erros){
         var li = document.createElement("li");
     ul.appendChild(li);
     });
-   
-    function adicionaPacienteNaTabela(pacientes){
-        var pacienteTr = montaTr(paciente);
-        var tabela = document.querySelector("#tabela-pacientes")
-        tabela.appendChild(pacienteTr);
-
-    }
+    
 }
 
 
