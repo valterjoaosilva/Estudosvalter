@@ -20,9 +20,12 @@ var tempoRestante = $("#tempo-digitacao").text();
 campo.on("focus", function(){
     setInterval(function(){
         tempoRestante--;
-        console.log(tempoRestante);
         $("#tempo-digitacao").text(tempoRestante);
     },1000);
 
 
+});
+
+$("#botao-reiniciar").on("click",function(){
+    console.log("botao clicado");
 });
