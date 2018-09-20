@@ -6,13 +6,17 @@
 </head>
 <body>
   <h1>Alura Typer</h1>
-  <p classe="frase">Lorem ipsum dolor sit amet, consetetur adipisicing leit.
-       Assumenda quibusdam auas cupiditate error matus delectus suscipit, 
-       temporibus at, optio ullam , doloribus nostrum eveniet dolores
-        consectetur pariatur autem repellat nulla sit.</p>
+  <p class="frase">Podemos saber quantas palavras tem nessa frase</p>
         <ul class="informacoes">
-            <li>30 palavras</li>
-            <li>10 segundos</li>
+            <li><span id="tamanho-frase">5</span> palavras</li>
+            <li><span id="tempo-digitacao">10</span> segundos</li>
+        </ul>
+
+        <textarea class="campo-digitacao" rows="8" cols="40"></textarea>
+
+        <ul>
+            <li><span id="contador-caracteres">0</span> caracteres</li>
+            <li><span id="contador-palavras">0</span> palavras</li>
         </ul>
 
         <script src="js/jquery.js"></script>
